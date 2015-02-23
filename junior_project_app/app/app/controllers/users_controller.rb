@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:create, :new, :index, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
 
@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+  @user = User.find(params[:id])
   end
 
   # POST /users
@@ -80,17 +81,17 @@ class UsersController < ApplicationController
 	 # Before filters
 
     def signed_in_user
-	unless signed_in?
-		store_location
-		redirect_to signin_url, notice: "please sign in"
-		end
-	end
-	
-	def correct_user 
-	      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in."
+      end
+    end
 
-	end
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
+	
 	def admin_user
 	redirect_to(root_url) unless current_user.admin?
 	end
