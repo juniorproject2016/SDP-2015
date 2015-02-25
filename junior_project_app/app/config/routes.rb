@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :business_categories
+
+  resources :categories
+
   resources :businesses
 
   root  'static_pages#home'
