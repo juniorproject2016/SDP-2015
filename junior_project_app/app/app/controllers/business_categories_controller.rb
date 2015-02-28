@@ -1,6 +1,6 @@
 class BusinessCategoriesController < ApplicationController
   before_action :signed_in_user, only: [:index, :show]
-  before_action :admin_user, only: [:new, :edit, :update, :destroy]
+  before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /business_categories
   # GET /business_categories.json
@@ -11,6 +11,7 @@ class BusinessCategoriesController < ApplicationController
   # GET /business_categories/1
   # GET /business_categories/1.json
   def show
+  @business_category = BusinessCategory.find(params[:id])
   end
 
   # GET /business_categories/new
@@ -20,6 +21,7 @@ class BusinessCategoriesController < ApplicationController
 
   # GET /business_categories/1/edit
   def edit
+  @business_category = BusinessCategory.find(params[:id])
   end
 
   # POST /business_categories
@@ -41,25 +43,21 @@ class BusinessCategoriesController < ApplicationController
   # PATCH/PUT /business_categories/1
   # PATCH/PUT /business_categories/1.json
   def update
-    respond_to do |format|
-      if @business_category.update(business_category_params)
-        format.html { redirect_to @business_category, notice: 'Business category was successfully updated.' }
-        format.json { render :show, status: :ok, location: @business_category }
-      else
-        format.html { render :edit }
-        format.json { render json: @business_category.errors, status: :unprocessable_entity }
-      end
+    @business_category = BusinessCategory.find(params[:id])
+    if @business_category.update_attributes(business_category_params)
+      flash[:success] = "Business info updated"
+      redirect_to @business_category
+    else
+      render 'edit'
     end
   end
 
   # DELETE /business_categories/1
   # DELETE /business_categories/1.json
   def destroy
-    @business_category.destroy
-    respond_to do |format|
-      format.html { redirect_to business_categories_url, notice: 'Business category was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    BusinessCategory.find(params[:id]).destroy
+    flash[:success] = "Business deleted."
+    redirect_to business_categories_url
   end
 
   private
@@ -70,7 +68,7 @@ class BusinessCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_category_params
-      params.require(:business_category).permit(:businessName, :category)
+      params.require(:business_category).permit(:business_id, :category_id)
     end
 	
 	def signed_in_user
