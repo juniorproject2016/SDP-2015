@@ -5,12 +5,13 @@
         <section class="top-bar-section">
       <ul class="nav navbar-nav pull-right">
           <li><%= link_to "Home",  root_path %></li>
-		  <li><%= link_to "Businesses",  businesses_path %></li>
-		  <li><%= link_to "Categories",  categories_path %></li>
-		  <li><%= link_to "Businesses + Categories",  business_categories_path %></li>
           <li><%= link_to "addNewBus",    addB_path %></li>
+		  <li><%= link_to "Businesses",    main_path %></li>
           <% if signed_in? %>
 			  	<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+				<li><%= link_to "Businesses",  businesses_path %></li>
+		  <li><%= link_to "Categories",  categories_path %></li>
+		  <li><%= link_to "Businesses + Categories",  business_categories_path %></li>
 			<% else %>
 				<li><%= link_to "Sign in", signin_path %></li>
 			<% end %>

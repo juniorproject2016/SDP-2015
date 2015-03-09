@@ -8,12 +8,14 @@ Rails.application.routes.draw do
   root  'static_pages#home'
   
   match '/signin',  to: 'sessions#new',         via: 'get'
-    post   '/signin'   => 'sessions#create'
+  post   '/signin'   => 'sessions#create'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
   match '/addB', to: 'static_pages#addB', via: 'get'
 
   match '/contactUs', to: 'static_pages#contactUs', via: 'get'
+  
+  match '/main', to: 'business_categories#main',        via: 'get'
 
   resources :users
 

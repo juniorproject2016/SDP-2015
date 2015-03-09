@@ -1,0 +1,22 @@
+div class= "center hero-unit"
+<h1>Businesses</h1>
+
+<table>
+  <thead>
+    <tr>
+	  <th>Business name</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @business_categories.each do |bc| %>
+      <tr>
+	    <td><%= bc.business.name %></td>
+        <td><%= bc.category.name %></td>
+		</tr>
+    <% end %>
+  </tbody>
+</table>
+  </div>

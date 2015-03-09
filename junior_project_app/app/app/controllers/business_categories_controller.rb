@@ -2,6 +2,11 @@ class BusinessCategoriesController < ApplicationController
   before_action :signed_in_user, only: [:index, :show]
   before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
+  
+  def main
+      @business_categories = BusinessCategory.all
+  end
+  
   # GET /business_categories
   # GET /business_categories.json
   def index
