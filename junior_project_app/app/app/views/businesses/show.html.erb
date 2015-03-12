@@ -1,9 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @business.name %>
-</p>
+<p>This is where the profile picture would go</p>
+<h1>
+<strong><%= @business.name %></strong>
+</h1>
 
+<p>This where the description would go</p>
+
+
+<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5" data-colorscheme="light"></div>
+
+<% if signed_in? %>
 <%= link_to 'Edit', edit_business_path(@business) %> |
 <%= link_to 'Back', businesses_path %>
+<%end%>

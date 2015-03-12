@@ -1,4 +1,5 @@
-div class= "center hero-unit"
+<div class= "center hero-unit"/>
+
 <h1>Businesses</h1>
 
 <table>
@@ -13,8 +14,8 @@ div class= "center hero-unit"
   <tbody>
     <% @business_categories.each do |bc| %>
       <tr>
-	    <td><%= bc.business.name %></td>
-        <td><%= bc.category.name %></td>
+	    <td><%= link_to bc.business.name, business_path(bc.business_id) %></td>
+        <td><%= link_to bc.category.name, category_path(bc.category_id) %></td>
 		</tr>
     <% end %>
   </tbody>
