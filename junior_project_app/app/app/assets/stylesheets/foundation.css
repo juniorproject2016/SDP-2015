@@ -5299,3 +5299,13 @@ footer {
     cursor: pointer;
     border: 1px solid #f6f0e4;
 }
+
+comments {
+	display: blcok;
+	margin-right: inherit;
+    margin-left: inherit;
+    text-align: left;
+    padding: 10px 10px;
+    font-size: 22px;
+	}
+	
