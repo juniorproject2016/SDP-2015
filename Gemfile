@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
- ruby '2.0.0'
+ruby '2.1.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails',  '4.2.0'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -34,6 +34,10 @@ gem 'sdoc',          group: :doc
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+  gem 'will_paginate'
+  gem 'bootstrap-will_paginate'
+  
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 group :development, :test do
@@ -42,8 +46,6 @@ group :development, :test do
   gem 'bootstrap-sass'
   gem 'autoprefixer-rails'
   gem 'faker'
-  gem 'will_paginate'
-  gem 'bootstrap-will_paginate'
   gem 'sprockets'
   gem 'sqlite3'
 
