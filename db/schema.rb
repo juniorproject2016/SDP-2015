@@ -13,33 +13,33 @@
 
 ActiveRecord::Schema.define(version: 20150225134027) do
 
-  create_table "business_categories", force: true do |t|
-    t.string   "business_id"
-    t.string   "category_id"
+  create_table "business_categories", force: :cascade do |t|
+    t.string   "business_id", limit: 255
+    t.string   "category_id", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "businesses", force: true do |t|
-    t.string   "name"
+  create_table "businesses", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "categories", force: true do |t|
-    t.string   "name"
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
+  create_table "users", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "email",           limit: 255
     t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_digest"
-    t.string   "remember_token"
+    t.string   "password_digest", limit: 255
+    t.string   "remember_token",  limit: 255
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
