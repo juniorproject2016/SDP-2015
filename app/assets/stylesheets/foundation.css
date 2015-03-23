@@ -5139,14 +5139,13 @@ margin: 3px;
 .button  {
 clear:both;
 }
-.logo {  /* float the logo */
+.logo1 {  /* float the logo */
 float: left;
-margin: 5px 5px 5px 5px;
 }
 
-.logo img {
-width: 5px;
-height:3px;
+.logo1 img {
+width: 50%;
+height:20%;
 }
 .contain-to-grid, .top-bar {
 background: maroon;
@@ -5251,7 +5250,7 @@ p {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 0px;
   font-weight: bold;
   &:hover {
     color: white;
@@ -5308,4 +5307,36 @@ comments {
     padding: 10px 10px;
     font-size: 22px;
 	}
+	
+.logo {
+  float: left;
+  margin-right: 0px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 0px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  } 
+}
+
+.logo img{
+width: 100px;
+height:100px;
+  }
+  
+#logo {  /* float the logo */
+float: left;
+margin: 5px 5px 5px 5px;
+padding-top: 0px;
+}
+
+#logo img {
+width: 100px;
+height:40px;
+}
 	
