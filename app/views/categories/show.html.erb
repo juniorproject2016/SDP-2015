@@ -1,11 +1,30 @@
+<div class= "center hero-unit"/>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<h1>
+  <strong><%= @category.name %></strong>
+</h1>
 
+<table>
+  <thead>
+    <tr>
+	  <th>Business name</th>
+	   </tr>
+  </thead>
+  
+  <tbody>
+  
+    <%@business_categories = BusinessCategory.where(category_id: @category.id)
+	@business_categories.each do |bc| %>
+      <tr>
+	    <td><%= link_to bc.business.name, business_path(bc.business_id) %></td>
+	  </tr>
+    <% end %>
+  </tbody>
+</table>
 <% if signed_in? %>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
 <%end%>
+</div>
