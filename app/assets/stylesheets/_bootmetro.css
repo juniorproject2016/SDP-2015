@@ -2283,6 +2283,17 @@ Carousel
    vertical-align: top;
 }
 
+#logo {  /* float the logo */
+float: left;
+margin: 5px 5px 5px 5px;
+padding-top: 0px;
+}
+
+#logo img {
+width: 100px;
+height:40px;
+}
+
 
 /*
 Responsive Media Queries

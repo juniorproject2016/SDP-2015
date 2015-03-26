@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width" /> 
+<meta name="viewport" content="width=device-width", initial-scale=1.0" /> 
   <title>App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,11 +10,8 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
-	<br>
-	<br>
-	<br>
-	<br>
+	<div class="container container-fluid row-fluid">
+	
       <%= yield %>
 	  <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
