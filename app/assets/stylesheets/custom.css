@@ -1,0 +1,17 @@
+
+.nav .navbar {
+background-color: black;
+width: 100%;
+padding:0;
+margin:0;
+}
+#header-container {
+background-color: black;
+width: 100%;
+padding:0;
+margin-left:0;
+}
+
+.container {
+padding:0;
+}

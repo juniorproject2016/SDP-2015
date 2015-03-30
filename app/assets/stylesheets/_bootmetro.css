@@ -1088,7 +1088,7 @@ ScrollView control.
 */
 .win-scrollview {
    overflow-x: auto;
-   overflow-y: hidden;
+   overflow-y: auto;
    height: 400px;
    width: 100%;
 }
@@ -1097,7 +1097,7 @@ ScrollView control.
 ListView control.
 */
 .win-listview {
-   overflow: hidden;
+   overflow: auto;
    height: 400px;
 }
 .win-listview .win-surface {
@@ -1114,7 +1114,7 @@ ListView control.
 }
 .win-listview > .win-viewport.win-horizontal {
    overflow-x: auto;
-   overflow-y: hidden;
+   overflow-y: auto;
 }
 .win-listview > .win-viewport.win-vertical {
    overflow-x: hidden;

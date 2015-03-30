@@ -6,8 +6,8 @@
 -------------------------------------------------- */
 html{
    height:100%;
-   overflow-y:hidden; /* Respect browser height */
-   overflow-x:hidden;
+   overflow-y:auto; /* Respect browser height */
+   overflow-x:auto;
 }
 body{
    width:100%;
@@ -37,7 +37,7 @@ body {
 width:100%;
 perspective:3300px;
 position:relative;
-overflow:hidden;
+overflow:auto;
 }
 
 
