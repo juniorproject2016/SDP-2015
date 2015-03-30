@@ -1,11 +1,11 @@
 <header class="navbar navbar-static-top navbar-inverse">
-  <div id="nav-bar" class="navbar container contain-to-grid navbar-default navbar-static-top">
+  <div id="nav-bar" class="navbar contain-to-grid navbar-default navbar-static-top">
   <div id="logo"><%= image_tag("Final-logo.jpg", :alt => "logo") %></div>
       <nav>
         <section class="top-bar-section">
       <ul class="nav navbar-nav pull-left">
           <li><%= link_to "Home",  root_path %></li>
-          <li><%= link_to "addNewBus",    addB_path %></li>
+          <li><%= link_to "Suggest A Business",    addB_path %></li>
 		  <li><%= link_to "Businesses",    main_path %></li>
           <% if signed_in? %>
 			  	<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
@@ -13,13 +13,11 @@
 		  <li><%= link_to "Categories",  categories_path %></li>
 		  <li><%= link_to "Businesses + Categories",  business_categories_path %></li>
 			<% else %>
-				<li><%= link_to "Sign in", signin_path %></li>
+				<li><%= link_to "Admin Only", signin_path %></li>
 			<% end %>
 			<li><a href="mailto:alikuwar@qatar.cmu.edu?Subject=Problem%20with%20Database">Report a Problem</a></li>
         </ul>
 		</section>
       </nav>
     </div>
-  </div>
-  </div>
 </header>
