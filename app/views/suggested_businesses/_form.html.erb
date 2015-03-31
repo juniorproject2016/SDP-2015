@@ -1,0 +1,25 @@
+<%= form_for(@suggested_business) do |f| %>
+  <% if @suggested_business.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@suggested_business.errors.count, "error") %> prohibited this suggested_business from being saved:</h2>
+
+      <ul>
+      <% @suggested_business.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"What is your name?" %><br>
+    <%= f.text_field :requester %>
+  </div>
+  <div class="field">
+    <%= f.label :"The Business's Instagram Account" %><br>
+    <%= f.text_field :business_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

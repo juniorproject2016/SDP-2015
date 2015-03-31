@@ -1,11 +1,11 @@
 <header id="header-container" class="navbar navbar-static-top navbar-inverse">
   <div id="nav-bar header-nav" class="nav navbar nav-pills contain-to-grid navbar-default navbar-static-top">
-	<div id="logo"><%= image_tag("Final-logo.jpg", :alt => "logo") %></div>
-      <nav class="navbar-inner">
+	<div id="logo"><%= link_to image_tag("Final-logo.jpg", :alt => "logo"), root_path %></div>
+      <nav>
      <section class="top-bar-section">
       <ul class="nav navbar-nav pull-left">
           <li><%= link_to "Home",  root_path %></li>
-          <li><%= link_to "Suggest A Business",    addB_path %></li>
+          <li><%= link_to "Suggest A Business",  new_suggested_business_path %></li>
 		  <li><%= link_to "Businesses",    main_path %></li>
           <% if signed_in? %>
 			  	<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
@@ -15,7 +15,7 @@
 			<% else %>
 				<li><%= link_to "Admin Only", signin_path %></li>
 			<% end %>
-			<li><a href="mailto:alikuwar@qatar.cmu.edu?Subject=Problem%20with%20Database">Report a Problem</a></li>
+			<li><a href="mailto:juniorproject2016@outlook.com ?Subject=Problem%20with%20InstaSouq">Report a Problem</a></li>
         </ul>
 	 </section>
     </nav>

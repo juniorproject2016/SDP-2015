@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  requester: MyString
+  business_name: MyString
+
+two:
+  requester: MyString
+  business_name: MyString

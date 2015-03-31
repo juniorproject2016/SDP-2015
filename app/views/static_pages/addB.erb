@@ -1,2 +1,21 @@
-<h1>StaticPages#addNewBus</h1>
-<p>Find me blalala in app/views/static_pages/addNewBus.html.erb</p>
+<h1>Sugest A Business</h1>
+<p>please add the business's information below and we will review it and get back to you as soon as possible.</p>
+
+<form  action="mailto:juniorproject2016@outlook.com"
+  method="POST"
+  enctype="multipart/form-data"
+  name="business suggestion">
+Your name:<br>
+<input type="text" name="name">
+<br>
+Are you the Business Owner?<br>
+<input type="radio" name="Owner" value="Owner" checked>Yes
+<br>
+<input type="radio" name="Owner" value="User">No
+<br>
+Business Instagram Account:<br>
+<input type="text" name="account">
+<br>
+<input class="submit" type="submit" value="Submit"/>
+
+</form>

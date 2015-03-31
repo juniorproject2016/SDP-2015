@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :suggested_businesses
+
   resources :business_categories
 
   resources :categories

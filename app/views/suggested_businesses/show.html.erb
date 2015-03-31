@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @suggested_business.requester %>
+</p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @suggested_business.business_name %>
+</p>
+
+<%= link_to 'Edit', edit_suggested_business_path(@suggested_business) %> |
+<%= link_to 'Back', suggested_businesses_path %>
