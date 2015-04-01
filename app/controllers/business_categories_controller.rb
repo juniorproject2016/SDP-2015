@@ -4,7 +4,7 @@ class BusinessCategoriesController < ApplicationController
 
   
   def main
-      @business_categories = BusinessCategory.all
+      @business_categories = BusinessCategory.paginate(page: params[:page], :per_page => 30)
   end
   
   # GET /business_categories
