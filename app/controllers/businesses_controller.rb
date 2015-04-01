@@ -43,14 +43,12 @@ class BusinessesController < ApplicationController
   # PATCH/PUT /businesses/1
   # PATCH/PUT /businesses/1.json
   def update
-    respond_to do |format|
-      if @business.update(business_params)
-        format.html { redirect_to @business, notice: 'Business was successfully updated.' }
-        format.json { render :show, status: :ok, location: @business }
-      else
-        format.html { render :edit }
-        format.json { render json: @business.errors, status: :unprocessable_entity }
-      end
+  @business = Business.find(params[:id])
+    if @business.update_attributes(business_params)
+      flash[:success] = "Business info updated"
+      redirect_to @business
+    else
+      render 'edit'
     end
   end
 
