@@ -57,11 +57,9 @@ class BusinessesController < ApplicationController
   # DELETE /businesses/1
   # DELETE /businesses/1.json
   def destroy
-    @business.destroy
-    respond_to do |format|
-      format.html { redirect_to businesses_url, notice: 'Business was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    Business.find(params[:id]).destroy
+    flash[:success] = "Business deleted."
+    redirect_to businesses_url
   end
 
   private
