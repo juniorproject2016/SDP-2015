@@ -11,7 +11,12 @@ class BusinessesController < ApplicationController
   # GET /businesses/1
   # GET /businesses/1.json
   def show
+  require 'open-uri'
+  require 'nokogiri'
   @business = Business.find(params[:id])
+  url = "http://www.iconosquare.com/foodqatarcom"
+  data = Nokogiri::HTML(open(url))
+  output = puts data.at_css(".bio-user").to_html
   end
 
   # GET /businesses/new

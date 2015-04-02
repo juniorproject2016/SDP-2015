@@ -44,8 +44,9 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   
   # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+  gem 'sqlite3'
   gem 'sprockets'
+
   
 end
 
