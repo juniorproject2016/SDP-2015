@@ -4,6 +4,10 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   # GET /categories.json
+  def homeList 
+	@categories = Category.all
+  end
+  
   def index
     @categories = Category.all
   end

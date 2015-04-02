@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   root  'static_pages#home'
   
+  match '/static_pages#home', to: 'categories#homeList',    via: 'get'
+  
   match '/signin',  to: 'sessions#new',         via: 'get'
   post   '/signin'   => 'sessions#create'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
