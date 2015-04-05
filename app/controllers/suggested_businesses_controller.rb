@@ -1,5 +1,5 @@
 class SuggestedBusinessesController < ApplicationController
-   before_action :signed_in_user, only: [:index, :show]
+  before_action :signed_in_user, only: [:index, :show]
   before_action :admin_user, only: [:create, :edit, :update, :destroy]
 
   # GET /suggested_businesses

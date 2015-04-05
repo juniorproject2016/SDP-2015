@@ -14,9 +14,16 @@ class BusinessesController < ApplicationController
   require 'open-uri'
   require 'nokogiri'
   @business = Business.find(params[:id])
-  url = "http://www.iconosquare.com/foodqatarcom"
+  url = "http://www.iconosquare.com/#{@business.name}"
   data = Nokogiri::HTML(open(url))
-  output = puts data.at_css(".bio-user").to_html
+  unless data.at_css(".bio-user").nil? 
+  @description = data.at_css(".bio-user").text.strip
+  end
+  @description ||= "No Description"
+  unless data.at_css(".fullname").nil?
+  @title = data.at_css(".fullname").text.strip
+  end
+  @title ||= "This user is Private on Instagram :("
   end
 
   # GET /businesses/new
