@@ -24,6 +24,10 @@ class BusinessesController < ApplicationController
   @title = data.at_css(".fullname").text.strip
   end
   @title ||= "This user is Private on Instagram :("
+  unless data.at_css(".bio-user").nil?
+  @image = data.xpath("//img/@src")[5].to_s
+  end
+  @image ||= "https://d13yacurqjgara.cloudfront.net/users/22251/screenshots/803201/no-photo-grey_1x.png"
   end
 
   # GET /businesses/new

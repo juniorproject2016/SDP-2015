@@ -60,6 +60,14 @@ class SuggestedBusinessesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def verified
+ require 'open-uri'
+  require 'nokogiri'
+  url = "http://www.iconosquare.com/hello"
+  data = Nokogiri::HTML(open(url))
+  return data.at_css("title").equal("404 not found") 
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

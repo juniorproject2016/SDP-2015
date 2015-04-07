@@ -7,7 +7,7 @@
     <tr>
       <th>Requester</th>
       <th>Business name</th>
-      <th colspan="3"></th>
+      <th>Verified</th>
     </tr>
   </thead>
 
@@ -16,6 +16,7 @@
       <tr>
         <td><%= suggested_business.requester %></td>
         <td><%= suggested_business.business_name %></td>
+		<td><%= suggested_business.verified %></td>
         <td><%= link_to 'Show', suggested_business %></td>
         <td><%= link_to 'Edit', edit_suggested_business_path(suggested_business) %></td>
         <td><%= link_to 'Destroy', suggested_business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,6 +24,8 @@
     <% end %>
   </tbody>
 </table>
+
+<p> If third value is true that means the suggested business doesn't exist </p>
 
 <br>
 
