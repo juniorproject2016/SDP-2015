@@ -39,6 +39,9 @@ width: 450px;
 height:250px;
 }
 
-.modal-footer (
+.modal-footer {
 background-color: black;
+}
+h4 {
+color:black
 }
