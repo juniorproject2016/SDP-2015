@@ -11326,6 +11326,7 @@ width: 100px;
 height:90px;
 }
 #logo2 img {
+float: left;
 width: 200px;
 height:50px;
 }
@@ -11343,6 +11344,14 @@ color:black
 
 #nav-bar {
 float:none
+}
+
+.ftext {
+color: white;
+}
+
+body {
+    color: white;
 }
 /* Demo styles for Hub and other metro pages
 -------------------------------------------------- */
