@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<%=  image_tag(@image, :alt => "Business profile pic") %>
-<h1> <%= @title %> </h1>
-<p>
-<strong> <a href="http://www.instagram.com/<%=@business.name%>" target="_blank"> <%= @business.name %> </a> </strong>
-</p>
 
-<p>This where the description would go</p>
+<%=  image_tag(@image, :alt => "Business profile pic") %>
+<h2> <%= @title %> </h2>
+ <a href="http://www.instagram.com/<%=@business.name%>" target="_blank">
+ <%= image_tag("link to insta.jpg", :class=>"logo2") %> </a>
+<p>
+<strong> <%= @business.name %>  </strong>
+</p>
  <p><%= @description %></p>
 
 <div id="disqus_thread"></div>
