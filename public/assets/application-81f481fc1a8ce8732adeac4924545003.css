@@ -3462,7 +3462,7 @@ input[type="color"],
   display: inline-block;
   height: 20px;
   padding: 4px 6px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-size: 14px;
   line-height: 20px;
   color: #555555;
@@ -11352,6 +11352,10 @@ color: white;
 
 body {
     color: white;
+}
+
+.uneditable-input {
+margin-bottom: 0px;
 }
 /* Demo styles for Hub and other metro pages
 -------------------------------------------------- */
