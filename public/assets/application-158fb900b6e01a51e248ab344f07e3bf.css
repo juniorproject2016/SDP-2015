@@ -11311,9 +11311,9 @@ margin-left:0;
 padding:0;
 }
 
-h2 {
+/* h2 {
 color:white;
-}
+} */
 
 #logo {  /* float the logo */
 float: left;
@@ -11356,6 +11356,109 @@ body {
 
 .uneditable-input {
 margin-bottom: 0px;
+}
+
+.row-fluid .span8{
+	width: 100% !important;
+	height: 300px !important;
+ 	background-color: black; 
+	opacity: 1 !important;
+	margin-left: -1px !important;
+	margin-top: -70px; 
+}
+p, ol, ul, td {
+    font-family: Futura, sans-serif !important;
+    color: #7D7D7D;
+    padding-top: 10px;
+    /*position: relative;
+    top: -450px;
+    left: 40px; */ 
+}
+#img-rounded{
+	float: left;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+#img-rounded img{
+height: 150px;
+width: 150px;
+}
+.logo2{
+	opacity: 1 !important;
+	height: 40px;
+	position: absolute;
+	float: right;
+	top: 150px;
+	right: 60px;
+}
+p {
+	padding-left: 180px;
+	padding-bottom: 50px !important;
+}  
+strong {
+	position: relative;
+	top: 45px !important;
+	color: #C8CACC;
+}
+
+.container {
+	background-color: white;
+}
+div.field, div.actions {
+	margin-left: 15px !important;
+	margin-bottom: 20px;
+}
+
+a {
+	margin-left: 15px !important;
+	margin-bottom: 20px;
+}
+
+#footer a {
+    color: white !important;
+}
+h2 {
+	top: 50px !important; 
+}
+/* img {
+	height: 110px !important;
+} */ 
+
+#categoryName {
+	position: relative;
+	bottom: 750px;
+	color: black;
+}
+#cat-position{
+	position: relative;
+	top: 170px;
+	left: 360px;
+}
+.across {
+    width: 1420px !important; 
+    margin-left: -90px !important;
+    position: relative;
+	bottom: 130px;
+	height: 200px !important;
+}
+.catImg {
+	position: absolute !important;
+    clip: rect(0px,1420px,300px,0px)!important;
+    opacity: 1 !important;
+} 
+.link-insta {
+float: right;
+position: relative;
+width: 200px;
+height:50px;
+}
+.link-insta img {
+float: right;
+position: relative;
+width: 200px;
+height:50px;
 }
 /* Demo styles for Hub and other metro pages
 -------------------------------------------------- */

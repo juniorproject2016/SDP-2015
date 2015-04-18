@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-
-<%=  image_tag(@image, :alt => "Business profile pic") %>
-<h2> <%= @title %> </h2>
- <a href="http://www.instagram.com/<%=@business.name%>" target="_blank">
- <%= image_tag("link to insta.jpg", :class=>"logo2") %> </a>
-<p>
-<strong> <%= @business.name %>  </strong>
-</p>
- <p><%= @description %></p>
-
+<div class="span8">
+	<div id="img-rounded">
+	<%=  image_tag(@image, :alt => "Business profile pic") %>
+	</div>
+	<h2> <%= @title %> </h2>
+	 <a href="http://www.instagram.com/<%=@business.name%>" target="_blank">
+	 <%= image_tag("link to insta.jpg", :class=>"link-insta") %> </a>
+	<p>
+	<strong> <%= @business.name %>  </strong>
+	</p>
+	 <p><%= @description %></p>
+</div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */

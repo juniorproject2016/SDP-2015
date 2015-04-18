@@ -19,7 +19,7 @@ class BusinessesController < ApplicationController
   unless data.at_css(".bio-user").nil? 
   @description = data.at_css(".bio-user").text.strip
   end
-  @description ||= "No Description"
+  @description ||= "For this business's Description please visit their instagram page"
   unless data.at_css(".fullname").nil?
   @title = data.at_css(".fullname").text.strip
   end
