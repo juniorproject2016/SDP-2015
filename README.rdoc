@@ -5,21 +5,24 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.15
+Rails Version: 4.1.6
 
 * System dependencies
 
 * Configuration
 
 * Database creation
-
+the databse is currently fully implemented though to re add the businesses in case of loss of data please run the rake task below
 * Database initialization
-
+rake add_businesses:populate
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+website deployed to heroku: www.instagramapp.herokuapp.com
+
 
 * ...
 
